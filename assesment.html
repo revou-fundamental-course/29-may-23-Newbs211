@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assesment</title>
+
+</head>
+
+<body>
+
+
+    <link rel="stylesheet" href="assesment.css">
+    <header>
+       <a href="assesment.html" style="color: black; text-decoration: underline transparent;"><img src="https://images.glints.com/unsafe/glints-dashboard.s3.amazonaws.com/company-logo/a32f81155cd0d4f16d36aef74f7d2644.png"
+        alt="logorevou" class="logo"></a> 
+        <div class="nav-bar">
+            <div class="nav-item" style="font-weight: bold;" ><a href="assesment.html" style="color: black; text-decoration: underline transparent;">Home</a></div>
+            <div class="nav-item" style="font-weight: bold;"><a href="assesment2.html" style="color: black; text-decoration: underline transparent;">Our Profile</a></div>
+            <div class="nav-item" style="font-weight: bold;">Portofolio</div>
+            <div class="nav-item" style="font-weight: bold;">Message Us</div>
+        </div>
+    </header>
+
+    <div id="Hero" class="Hero">
+        <br>
+        <br>
+        <br>
+        <h1 style="margin-left:2%">Hi Hans, Welcome To Website</h1>
+        <h2 style="margin-left:2%">Ini adalah website latihan pertama</h2>
+        <p style="margin-right:50% ; margin-left:2%; text-align: justify;font-size: large;">RevoU adalah sebuah
+            perusahaan pendidikan
+            daring (online) yang menyediakan program-program pelatihan keahlian digital dan karier untuk membantu
+            individu mengembangkan keterampilan yang dibutuhkan dalam dunia kerja yang terus berkembang. RevoU fokus
+            pada pelatihan keahlian digital seperti pemasaran digital, data analytics, product management, dan UI/UX
+            design.</p>
+        <br>
+        <p style="margin-right:50% ; margin-left:2%; text-align: justify;font-size: large;">Program-program RevoU
+            dirancang untuk
+            mempersiapkan peserta dengan pengetahuan praktis dan keterampilan yang dibutuhkan dalam industri digital
+            saat ini. Mereka menawarkan program pembelajaran berbasis praktik yang dirancang oleh para praktisi industri
+            berpengalaman. Melalui kombinasi materi pembelajaran online, studi kasus, tugas, dan proyek nyata, RevoU
+            berupaya memberikan pengalaman belajar yang interaktif dan relevan.</p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="headquarters-section">
+        <br>
+        <h1 id="headquarter">Headquarters</h1>
+        <br>
+        <br>
+        <br>
+        <div class="wrapper">
+            <div class="headquarters-image-container">
+                <div class="headquarter-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Monas_2.jpg" alt="jakarta"
+                        id="gambar">
+                </div>
+                <p id="sub1">Jakarta</p>
+            </div>
+
+            <div class="headquarters-image-container">
+                <div class="headquarter-image">
+                    <img src="https://i2.wp.com/blog.tripcetera.com/id/wp-content/uploads/2019/05/gedung-sate-bandung-1080x508.jpg"
+                        alt="Bandung" id="gambar">
+                </div>
+                <p id="sub1">Bandung</p>
+            </div>
+
+            <div class="headquarters-image-container">
+                <div class="headquarter-image">
+                    <img src="https://beritajatim.com/wp-content/uploads/2022/10/EPwZeTZU4AIh3kg.jpg" alt="Surabaya"
+                        id="gambar">
+                </div>
+                <p id="sub1">Surabaya</p>
+            </div>
+
+        </div>
+        <br>
+        <br>
+    </div>
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 style="margin-left:2%">Message Us</h1>
+    <div id="form">
+        <table id="table">
+            <tr>
+                <td>Nama</td>
+                <td>:</td>
+                <td>
+                    <input type="text" id="Nama">
+                </td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td id="ttl">Tanggal Lahir</td>
+                <td id="ttl">:</td>
+                <td>
+                    <input type="date" id="tanggallahir" placeholder="Tanggal Lahir">
+                </td>
+            </tr>
+            <tr></tr>
+            <tr id="gender">
+                <td>Jenis Kelamin</td>
+                <td>:</td>
+                <td>
+                    <input type="radio" id="laki">
+                    <label for="laki">Laki-Laki</label>
+                    <input type="radio" id="perempuan">
+                    <label for="perempuan">perempuan</label>
+                </td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td id="Pesantexts">Pesan</td>
+                <td id="Pesantexts">:</td>
+                <td>
+                    <textarea name="pesan" id="pesan" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td> <input type="submit" id="btn" value="submit"></td>
+            </tr>
+        </table>
+        <article id="article">
+            <p class="output" id="output1"></p>
+        </article>
+
+        <script>
+            var gender2 = document.getElementById('perempuan');
+            var gender1 = document.getElementById('laki');
+            const btn = document.getElementById('btn');
+            const out1 = document.getElementById('output1');
+            function fun() {
+                const name = document.getElementById('Nama').value;
+                const ttl = document.getElementById('tanggallahir').value;
+                const Pesan = document.getElementById('pesan').value;
+                if (gender1.checked) {
+                    gender = "Laki-Laki";
+                }
+                else if (gender2.checked) {
+                    gender = "Perempuan";
+                }
+                else {
+                    gender = "unknown";
+                }
+
+
+
+                const response = "Nama:" + name + "<br>" + "ttl:" + ttl + "<br>" + "Jenis Kelamin:" + gender + "<br>" + "Pesan:" + Pesan + "<br>";
+                out1.innerHTML = response;
+
+            }
+            btn.addEventListener('click', fun);
+
+
+
+        </script>
+
+    </div>
+</body>
+<footer>
+    <br>
+    <br>
+    <br>
+    Created By Hans
+</footer>
+
+</html>
